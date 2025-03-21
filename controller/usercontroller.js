@@ -145,7 +145,7 @@ exports.viewcontact = async (req, res) => {
             });
         }
         else {
-            var data = await contact.find().populate('user_id');
+            var data = await contact.find().populate('userId');
             res.status(200).json({
                 status: 'true',
                 message: 'Contact Data Fetched Successfully',
