@@ -201,7 +201,7 @@ exports.delete = async (req, res) => {
             });
         }
         else {
-            var data = await contact.findByIdAndDelete(req.params.id);
+            await contact.findByIdAndDelete(req.params.id);
             res.status(200).json({
                 status: true,
                 message: "Your contact is deleted..!",
